@@ -1,0 +1,52 @@
+# VS Code: install/enable the "REST Client" extension (humao.rest-client)
+# to see the "Send Request" CodeLens above each named request.
+@baseUrl = http://localhost:5126
+@apiToken = local-development-token-user-management-2026
+
+### @name getAllUsers
+GET {{baseUrl}}/api/users
+Accept: application/json
+Authorization: Bearer {{apiToken}}
+
+### @name createUser
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{apiToken}}
+
+{
+  "name": "An Nguyen",
+  "email": "an.nguyen@example.com",
+  "department": "Engineering"
+}
+
+### @name getCreatedUser
+GET {{baseUrl}}/api/users/{{createUser.response.body.$.id}}
+Accept: application/json
+Authorization: Bearer {{apiToken}}
+
+### @name updateCreatedUser
+PUT {{baseUrl}}/api/users/{{createUser.response.body.$.id}}
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{apiToken}}
+
+{
+  "name": "An Nguyen",
+  "email": "an.nguyen@example.com",
+  "department": "Platform Engineering"
+}
+
+### @name deleteCreatedUser
+DELETE {{baseUrl}}/api/users/{{createUser.response.body.$.id}}
+Authorization: Bearer {{apiToken}}
+
+### @name getDeletedUser
+GET {{baseUrl}}/api/users/{{createUser.response.body.$.id}}
+Accept: application/json
+Authorization: Bearer {{apiToken}}
+
+### @name getNonexistentUser
+GET {{baseUrl}}/api/users/2
+Accept: application/json
+Authorization: Bearer {{apiToken}}

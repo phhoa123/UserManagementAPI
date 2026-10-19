@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "I554K5A2/Ys=",
+  "success": true,
+  "projectFilePath": "D:\\Work\\BackEnd\\UserManagementAPI\\UserManagementAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phhoa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.13\\microsoft.aspnetcore.openapi.10.0.13.nupkg.sha512",
+    "C:\\Users\\phhoa\\.nuget\\packages\\microsoft.openapi\\2.12.2\\microsoft.openapi.2.12.2.nupkg.sha512",
+    "C:\\Users\\phhoa\\.nuget\\packages\\scalar.aspnetcore\\2.18.0\\scalar.aspnetcore.2.18.0.nupkg.sha512"
+  ],
+  "logs": []
+}
